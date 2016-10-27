@@ -55,7 +55,7 @@
     }
 	
     function verify(){
-		var get2 = (parseFloat(document.getElementById("old").value) + parseFloat(document.getElementById("new").value * 2)) / 3;
+		var get2 = (parseFloat(document.getElementById("old").innerHTML) + parseFloat(document.getElementById("new").innerHTML * 2)) / 3;
 		if (get2 <= 1.125) {
 			var final2 = "1.00";
 		} else if (get2 <= 1.375) {
