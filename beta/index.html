@@ -55,7 +55,7 @@
     }
 	
     function verify(){
-		var get2 = (parseFloat(document.getElementById("old").value) / 100 + parseFloat(document.getElementById("new").value) / 50) / 3;
+		var get2 = (parseFloat(document.getElementById("old").value) + parseFloat(document.getElementById("new").value * 2)) / 3;
 		if (get2 <= 1.125) {
 			var final2 = "1.00";
 		} else if (get2 <= 1.375) {
@@ -130,7 +130,7 @@ background-size: cover;}
 -->
 <span id="gwa" style="font-weight:bold;">1.00</span>
 <hr>
-<table class="magic">
+<table>
 <tbody>
 <tr><td><input onclick="changegrade2('old', -1)" value="-" type="button"></td><td>Previous Quarter's Grade</td><td>2</td><td><span id="old">1.00</span></td><td><input onclick="changegrade2('old', 1)" value="+" type="button"></td></tr>
 <tr><td><input onclick="changegrade2('new', -1)" value="-" type="button"></td><td>Present Quarter's Grade</td><td>1.7</td><td><span id="new">1.00</span></td><td><input onclick="changegrade2('new', 1)" value="+" type="button"></td></tr>
