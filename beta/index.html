@@ -32,13 +32,13 @@
 		getgwa();
 	}
 	function changegrade2(subject, amt) {
-		var value2 = parseFloat(document.getElementById(subject).innerHTML);
-		if (value2 + 0.25 * amt < 1) {
+		var value3 = parseFloat(document.getElementById(subject).innerHTML);
+		if (value3 + 0.25 * amt < 1) {
 			return 0;
-		} else if (value2 + 0.25 * amt <= 3) {
-			document.getElementById(subject).innerHTML = (value2 + 0.25 * amt).toFixed(2);
-		} else if (value2 + 0.25 * amt <= 5) {
-			document.getElementById(subject).innerHTML = (value2 + 1 * amt).toFixed(2);
+		} else if (value3 + 0.25 * amt <= 3) {
+			document.getElementById(subject).innerHTML = (value3 + 0.25 * amt).toFixed(2);
+		} else if (value3 + 0.25 * amt <= 5) {
+			document.getElementById(subject).innerHTML = (value3 + 1 * amt).toFixed(2);
 		} else {
 			//none
 		}
@@ -54,7 +54,7 @@
         document.getElementById("gwa").innerHTML = (final).toFixed(4);
     }
 	
-	function verify(){
+    function verify(){
 		var get2 = (parseFloat(document.getElementById("old").value) / 100 + parseFloat(document.getElementById("new").value) / 50) / 3;
 		if (get2 <= 1.125) {
 			var final2 = "1.00";
@@ -132,8 +132,8 @@ background-size: cover;}
 <hr>
 <table class="magic">
 <tbody>
-<tr><td class="magic"><input onclick="changegrade2('old', -1)" value="-" type="button"></td><td>Previous Quarter's Grade</td><td>2</td><td><span id="old">1.00</span></td><td class="magic"><input onclick="changegrade2('old', 1)" value="+" type="button"></td></tr>
-<tr><td class="magic"><input onclick="changegrade2('new', -1)" value="-" type="button"></td><td>Present Quarter's Grade</td><td>1.7</td><td><span id="new">1.00</span></td><td class="magic"><input onclick="changegrade2('new', 1)" value="+" type="button"></td></tr>
+<tr><td><input onclick="changegrade2('old', -1)" value="-" type="button"></td><td>Previous Quarter's Grade</td><td>2</td><td><span id="old">1.00</span></td><td><input onclick="changegrade2('old', 1)" value="+" type="button"></td></tr>
+<tr><td><input onclick="changegrade2('new', -1)" value="-" type="button"></td><td>Present Quarter's Grade</td><td>1.7</td><td><span id="new">1.00</span></td><td><input onclick="changegrade2('new', 1)" value="+" type="button"></td></tr>
 </tbody></table>
 <span id="gwa2" style="font-weight:bold;">0.00</span>
 </div>
