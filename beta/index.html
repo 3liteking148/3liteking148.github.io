@@ -65,7 +65,7 @@
 
     function getgwa() {
         var final = (get("is", 2) + get("math", 1.7) + get("english", 1.3) + get("filipino", 1) + get("socsci", 1) + get("pehm", 0.99) + get("valed", .7) + get("adtech", 1) + get("compsci", 1) + get("earthsci", .7)) / 11.39;
-        document.getElementById("gwa").innerHTML = fix(final);
+        document.getElementById("gwa").innerHTML = final.toFIxed(4);
     }
 	
 	function fix(x){
