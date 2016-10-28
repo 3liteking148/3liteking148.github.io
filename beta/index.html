@@ -65,14 +65,10 @@
 
     function getgwa() {
         var final = (get("is", 2) + get("math", 1.7) + get("english", 1.3) + get("filipino", 1) + get("socsci", 1) + get("pehm", 0.99) + get("valed", .7) + get("adtech", 1) + get("compsci", 1) + get("earthsci", .7)) / 11.39;
-        document.getElementById("gwa").innerHTML = final.toFixed(4);
+        document.getElementById("gwa").innerHTML = final.toPrecision(4);
     }
 	
-	function fix(x){
-		var res = parseInt(Math.floor(x*1000));
-		var finish = res.toString().substring(0,1) + "." + res.toString().substring(1,4);
-		return finish;
-	}
+
     function verify(){
 		var get2 = (parseFloat(document.getElementById("old").innerHTML) + parseFloat(document.getElementById("new").innerHTML * 2)) / 3;
 		if (get2 <= 1.125) {
